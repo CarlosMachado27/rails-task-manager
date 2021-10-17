@@ -1,5 +1,10 @@
-<ul>
-  <% @tasks.each do|task| %>
- <li><%= link_to task.title, task_path(task)  %></li>
- <% end %>
-</ul>
+<div class="container mt-4">
+  <h1>My Tasks</h1>
+  <ul>
+    <% @tasks.each do|task| %>
+  <h4><li><%= link_to task.title, task_path(task) %></li></h4>
+  <% end %>
+  </ul>
+  <br>
+  <h4><%= link_to "+ Add new task", task_new_path, class:"btn btn-primary" %></h4>
+</div>
