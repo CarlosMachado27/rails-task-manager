@@ -1,7 +1,9 @@
 <div class="container mt-4">
-  <h1><%= @task.title %></h1>
-  <hr>
-  <h3><%= @task.details %></h3>
-
-  <%= link_to "Back to list", tasks_path %>
+    <h1><%= @task.title %></h1>
+    <%= link_to "edit", task_edit_path, class: "btn btn-primary" %>
+    <hr>
+  <div class="bg-secondary p-4 mb-3">
+    <h3><%= @task.details %></h3>
+  </div>
+  <%= link_to "Back to list", tasks_path, class: "btn btn-primary" %>
 </div>
